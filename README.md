@@ -116,7 +116,7 @@ Given the classification results, we test the impact of TrAct on diffusion model
 
 We find a small yet consistent improvement in FID early in training across all models, which then results in a slight degradation as training progresses. This suggests that TrAct may be most beneficial early in diffusion training. Alternatively, the degradation may be due to the instability of FID as a metric itself (e.g. improved image quality does not always yield better FID scores). 
 
-A few notes on LDM-B. All models were scaled to achieve a similar parameter count ~120M; however, this may scaling may have be unfair to LDM as the forward pass was significantly faster (~2.2x). Rombach et al. (2022) used a larger LDM model at around 220M parameters, which may have been a more equitable comparison. Additionally, LDM-B was trained at a lower learning rate (1e-4 vs. 4e-4) due to instability of conv-nets at higher Adam learning rates for small batch sizes (e.g. 256). Regardless of these factors, insights into to the impact of TrAct on the model itself should still be valid.
+A few notes on LDM-B. All models were scaled to achieve a similar parameter count ~120M; however, this scaling may be unfair to LDM as the forward pass was significantly faster (~2.2x). Rombach et al. (2022) used a larger LDM model at around 220M parameters, which may have been a more equitable comparison. Additionally, LDM-B was trained at a lower learning rate (1e-4 vs. 4e-4) due to conv-nets exhibiting instability at higher Adam learning rates for small batch sizes (e.g. 256). Regardless of these factors, insights into to the impact of TrAct on the model itself should still be valid.
 
 
 
